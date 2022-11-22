@@ -1,0 +1,30 @@
+import { defineNuxtPlugin } from "#app";
+import PrimeVue from "primevue/config";
+import Button from "primevue/button";
+import DataTable from "primevue/datatable";
+import Dialog from "primevue/dialog";
+import InputText from "primevue/inputtext";
+import Textarea from "primevue/textarea";
+import Dropdown from "primevue/dropdown";
+import RadioButton from "primevue/radiobutton";
+import InputNumber from "primevue/inputnumber";
+import Toolbar from "primevue/toolbar";
+import Column from "primevue/column";
+import ToastService from 'primevue/toastservice';
+import Toast from 'primevue/toast';
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(PrimeVue, {ripple: true});
+  nuxtApp.vueApp.use(ToastService);
+  nuxtApp.vueApp.component('Button', Button);
+  nuxtApp.vueApp.component('DataTable', DataTable);
+  nuxtApp.vueApp.component('Column', Column);
+  nuxtApp.vueApp.component('Dialog', Dialog);
+  nuxtApp.vueApp.component('InputText', InputText);
+  nuxtApp.vueApp.component('Textarea', Textarea);
+  nuxtApp.vueApp.component('Dropdown', Dropdown);
+  nuxtApp.vueApp.component('RadioButton', RadioButton);
+  nuxtApp.vueApp.component('InputNumber', InputNumber);
+  nuxtApp.vueApp.component('Toolbar', Toolbar);
+  nuxtApp.vueApp.component('Toast', Toast);
+});
